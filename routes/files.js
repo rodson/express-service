@@ -39,8 +39,44 @@ var files = [
   }
 ];
 
+var file = {
+  name: '测试文件ppt',
+  images: [
+    {
+      url: 'images/image0.png',
+      width: 1024,
+      height: 768
+    },
+    {
+      url: 'images/image1.png',
+      width: 1024,
+      height: 768
+    },
+    {
+      url: 'images/image2.png',
+      width: 1024,
+      height: 768
+    },
+    {
+      url: 'images/image3.png',
+      width: 1024,
+      height: 768
+    },
+    {
+      url: 'images/image4.png',
+      width: 1024,
+      height: 768
+    }
+  ]
+};
+
 router.get('/', function(req, res, next) {
   res.json(files);
 });
+
+router.get('/:fileId', function(req, res, next) {
+  res.json(file);
+});
+
 
 module.exports = router;
