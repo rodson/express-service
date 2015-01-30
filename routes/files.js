@@ -78,5 +78,10 @@ router.get('/:fileId', function(req, res, next) {
   res.json(file);
 });
 
+router.post('/', function(req, res, next) {
+  console.log(req.files);
+  res.json({message: 'success'});
+});
+
 
 module.exports = router;
