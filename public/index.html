@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+
+  <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+  <link rel="import" href="bower_components/paper-input/paper-input.html">
+  <link rel="import" href="bower_components/core-ajax/core-ajax.html">
+
+</head>
+<body fullbleed layout vertical center-center>
+  <paper-input label="Your Name"></paper-input>
+  <paper-input label="Your password"></paper-input>
+
+  <button id="submit">submit</button>
+
+  <core-ajax id="ajax" url="/login" params='{"name": "admin", "password": "admin"}'
+      handleAs="json">
+
+  <script>
+    var submit = document.querySelector('#submit');
+    submit.addEventListener('click', function() {
+      var submit = document.querySelector('#ajax');
+      submit.go();
+    });
+
+  </script>
+</body>
+</html>
